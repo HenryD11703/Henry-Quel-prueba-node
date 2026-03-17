@@ -53,7 +53,18 @@ La infraestructura de la base de datos está contenedorizada con Docker. Para in
 docker-compose up -d
 ```
 
-Este comando levantará un contenedor de MySQL 8.0 y ejecutará automáticamente los scripts SQL ubicados en `./database/market.sql`.
+Este comando levantará un contenedor de MySQL 8.0 y ejecutará automáticamente los scripts SQL ubicados en `./database/market.sql` y `./database/seeds.sql`.
+
+## Datos de Prueba (Seeding)
+
+El proyecto incluye un script de carga de datos iniciales para facilitar las pruebas de los endpoints.
+
+*   **Carga Automática**: Al ejecutar `docker-compose up` por primera vez, los datos se cargarán automáticamente.
+*   **Carga Manual**: Si desea resetear los datos de prueba sin reiniciar el contenedor, ejecute:
+    ```bash
+    npm run seed
+    ```
+    *Nota: Este comando truncará las tablas existentes y volverá a insertar los datos definidos en `database/seeds.sql`.*
 
 ## Ejecución de la API
 

@@ -9,4 +9,5 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./database/market.sql:/docker-entrypoint-initdb.d/market.sql
+      - ./database/market.sql:/docker-entrypoint-initdb.d/01-market.sql
+      - ./database/seeds.sql:/docker-entrypoint-initdb.d/02-seeds.sql

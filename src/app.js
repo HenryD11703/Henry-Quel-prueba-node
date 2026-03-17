@@ -19,6 +19,7 @@ app.get("/", (req, res) => {
 // Routes
 app.use("/api/productos", require("./routes/producto.routes"));
 app.use("/api/categorias", require("./routes/categoria.routes"));
+app.use("/api/promociones", require("./routes/promocion.routes"));
 
 // Para las que no se encuentren rutas, se lanza un error 404
 app.use((req, res, next) => {

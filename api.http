@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:3000/api
+
+### 1. Listar Productos y Stock
+# Construir un Endpoint que permita listar los productos con los datos basicos 
+# y la información de stock en cada tienda donde esté disponible.
+GET {{baseUrl}}/productos
+Accept: application/json
+
+
+### 2. Top 10 Productos Más Vendidos
+# Construir un endpoint que liste los 10 productos más vendidos en orden Descendente 
+# por la cantidad de unidades vendidas
+GET {{baseUrl}}/productos/mas-vendidos
+Accept: application/json
+
+### 3. Categorías con Productos
+# Construir un Endpoint que liste las categorías que tengan al menos un Producto 
+# en orden Descendente por la cantidad de Productos.
+GET {{baseUrl}}/categorias
+Accept: application/json
+
+### 4. Promociones por Día
+# Construir un Endpoint que permita listar las Promociones que apliquen según 
+# un día de la semana (1=Lunes... 7=Domingo).
+# Ejemplo con día 3 (Miércoles según README)
+GET {{baseUrl}}/promociones?dia=3
+Accept: application/json
+
+### 5. Validar Error en el parámetro de Promociones 
+# Probando manejador de errores de express-validator cuando el dia está mal enviado
+GET {{baseUrl}}/promociones?dia=0
+Accept: application/json
+
+### 6. Ruta Desconocida
+# Asegurar que el Middleware 404 funciona.
+GET {{baseUrl}}/ruta-no-existente
+Accept: application/json

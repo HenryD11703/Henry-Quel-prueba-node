@@ -16,6 +16,9 @@ app.get("/", (req, res) => {
   res.json({ message: "API is running" });
 });
 
+// Routes
+app.use("/api/productos", require("./routes/producto.routes"));
+
 // Para las que no se encuentren rutas, se lanza un error 404
 app.use((req, res, next) => {
   const error = new Error("Not found");

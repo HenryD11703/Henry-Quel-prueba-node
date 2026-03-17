@@ -81,11 +81,15 @@ Retorna una lista de productos con su información básica y el stock disponible
 * **Método:** `GET`
 * **Respuesta Exitosa:** `200 OK`
 
+![Productos](imgs/productos_stock.png)
+
 #### Top 10 Productos Más Vendidos
 Lista los 10 productos con mayor volumen de ventas en orden descendente.
 * **URL:** `/productos/mas-vendidos`
 * **Método:** `GET`
 * **Respuesta Exitosa:** `200 OK`
+
+![Mas Vendidos](imgs/mas_vendidos.png)
 
 ### Categorías
 
@@ -94,6 +98,8 @@ Lista las categorías que tienen al menos un producto asociado, ordenadas por la
 * **URL:** `/categorias`
 * **Método:** `GET`
 * **Respuesta Exitosa:** `200 OK`
+
+![Categorias](imgs/categorias.png)
 
 ### Promociones
 
@@ -105,6 +111,8 @@ Permite filtrar las promociones vigentes según un día específico de la semana
     * `dia` (Requerido): Un número del 1 (Lunes) al 7 (Domingo).
 * **Respuesta Exitosa:** `200 OK`
 * **Error de Validación:** `400 Bad Request` (Si el día es inválido o no se proporciona).
+
+![Promociones por Día](imgs/promociones_por_dia.png)
 
 ## Estructura del Proyecto
 
